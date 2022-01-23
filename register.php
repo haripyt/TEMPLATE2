@@ -35,7 +35,9 @@ if(isset($_POST['name']))
    {
       $off="-";
    } 
-   $sql="INSERT INTO `register`.`register` (`name`, `email`, `phno`, `department`, `onstage`, `offstage`) VALUES ('$name', '$email', '$phone', '$dept', '$on', '$off');";
+   $sql="INSERT INTO `register`.`registration` (`name`, `email`, `phone`, `dept`, `onstage`, `offstage`, `date`) VALUES ('$name', '$email', '$phone', '$dept', '$on', '$off',current_timestamp());";
+   
+  
    // echo $sql;
 
    if($con->query($sql)== true){
