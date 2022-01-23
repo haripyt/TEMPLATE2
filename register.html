@@ -69,11 +69,15 @@
         <div class="row" >
             <div class="col-lg-5 col-md-8 mx-auto shadow border bg-white p-4 rounded" >
                 <h2 class="text-center fw-bold mb-3">Register Here</h2>
-                <form name="google-sheet">
+                <form action='register.php' method='post'>
                     
                     <div class="form-group mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" id="name" name="name" class="form-control" placeholder="Enter your Name" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="phone" class="form-label">Email Id</label>
+                        <input type="email" id="phone" name="email" class="form-control" placeholder="Enter your Email ID" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="phone" class="form-label">Phone Number</label>
@@ -81,23 +85,25 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="message" class="form-label">Department</label>
-                        <input id="Department" name="message" class="form-control" placeholder="Enter your Department" rows="5" required></input>
+                        <input id="Department" name="dept" class="form-control" placeholder="Enter your Department" rows="5" required></input>
                     </div>
                     <div class="form-group mb-3">
                         <label for="message" class="form-label">Select your Event</label><br>
                         <label for="phone" class="form-label">ON STAGE EVENTS:</label><br>
-                        <input type=checkbox  name="message" value='adzap' >ADZAP</input><br>
-                        <input type=checkbox  name="message" value='adzap' >CHANNEL SURFING</input><br>
-                        <input type=checkbox  name="message" value='adzap' >MIME</input><br>
-                        <input type=checkbox  name="message" value='adzap' >MR & MRS CYBERFEST</input><br><br>
-                        <label for="phone" class="form-label">OFF STAGE EVENTS:</label><br>
+                        <input type=checkbox  name="onstage[]" value='adzap' >ADZAP</input><br>
+                        <input type=checkbox  name="onstage[]" value='channel surfing' >CHANNEL SURFING</input><br>
+                        <input type=checkbox  name="onstage[]" value='mime' >MIME</input><br>
+                        <input type=checkbox  name="onstage[]" value='mr&ms' >MR & MS CYBERFEST</input><br>
+                        <input type=checkbox  name="onstage[]" value='none' > None</input><br><br>
 
-                        <input type=checkbox  name="message" value='adzap' >POSTER MAKING</input><br>
-                        <input type=checkbox  name="message" value='adzap' >PHOTOGRAPHY</input><br>
-                        <input type=checkbox  name="message" value='adzap' >CODNG</input><br>
-                        <input type=checkbox  name="message" value='adzap' >TRESURE HUNT</input><br>
-                        <input type=checkbox  name="message" value='adzap' >QUIZ</input><br>
-                        <input type=checkbox  name="message" value='adzap' >GAMING</input>
+                        <label for="phone" class="form-label">OFF STAGE EVENTS:</label><br>
+                        <input type=checkbox  name="offstage[]" value='poster' >POSTER MAKING</input><br>
+                        <input type=checkbox  name="offstage[]" value='photography' >PHOTOGRAPHY</input><br>
+                        <input type=checkbox  name="offstage[]" value='coding' >CODNG</input><br>
+                        <input type=checkbox  name="offstage[]" value='treasure' >TRESURE HUNT</input><br>
+                        <input type=checkbox  name="offstage[]" value='quiz' >QUIZ</input><br>
+                        <input type=checkbox  name="offstage[]" value='gaming' >GAMING</input><br>
+                        <input type=checkbox  name="offstage[]" value='none' > None</input>
 
 
                     </div>
