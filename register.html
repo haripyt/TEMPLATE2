@@ -35,22 +35,23 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">CYBERFEST|2K22</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-<span class="oi oi-menu"></span> Menu
+            <a class="navbar-brand" href="index.html" style="text-decoration:none;color: white;text-shadow: 2px 1px red;">CYBERFEST|2K22</a>
+            <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+<span  class="oi oi-menu"></span> Menu
 </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <ul class="navbar-nav ml-auto" style="color:black;text-shadow: 1px 2px black;">
+                    <li class="nav-item "><a href="index.html" class="nav-link" >Home</a></li>
+                    <li class="nav-item "><a href="about.html" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="schedule.html" class="nav-link">Schedule</a></li>
                     <li class="nav-item"><a href="speaker.html" class="nav-link">Guest</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item active"><a href="register.html" class="nav-link">Register Now</a></li>
+
                 </ul>
             </div>
         </div>
     </nav>
-
     <section class="hero-wrap hero-wrap-2" style="background-image:url(https://previews.123rf.com/images/houbacze/houbacze1701/houbacze170100393/70912329-red-easy-vector-illustration-isolated-circle-tag-banner-register-now-this-element-is-well-adapted-fo.jpg);height:430px;">
         <div class="overlay"></div>
         <div class="container">
@@ -69,9 +70,7 @@
             <div class="col-lg-5 col-md-8 mx-auto shadow border bg-white p-4 rounded" >
                 <h2 class="text-center fw-bold mb-3">Register Here</h2>
                 <form name="google-sheet">
-                    <div id="form_alerts">
-                        
-                    </div>
+                    
                     <div class="form-group mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" id="name" name="name" class="form-control" placeholder="Enter your Name" required>
@@ -105,10 +104,13 @@
                     <div>
                         <button class="btn btn-primary me-2" type="submit">Confirm Registration!</button>
                     </div>
-                </form>
+             </form><br>
+                <div id="form_alerts">
+                        
+                    </div>
             </div>
          </div><br><br>
-                 <h2 class="text-center fw-bold mb-3">Form Owned By HariHaran</h2>
+                 <h2 class="text-center fw-bold mb-3">Form Owned By <a href="https://www.instagram.com/_ha.re_here/" target="_blank" rel="nofollow noopener">HARIHARAN</a></h2>
 
     </div>
 
@@ -121,8 +123,8 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Contact message sent successfully.</div>"))
-            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Registered Successfully.</div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Registration closed temporarily.</div>"))
         })
     </script>
 </body>
